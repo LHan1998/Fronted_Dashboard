@@ -22,6 +22,7 @@
 
 <script>
 // import Navbar from "@/views/Dashboard/components/Navbar";
+import { test } from "@/api/DashBoard";
 import PanelGroup from "@/views/Dashboard/components/PanelGroup";
 import LineChart from "@/views/Dashboard/components/LineChart";
 import Bar from "@/views/Dashboard/components/Bar";
@@ -35,6 +36,16 @@ export default {
     LineChart,
     Bar,
     Table
+  },
+  methods: {
+    logtest(){
+      test().then(res =>{
+        console.log(res)
+      })
+    }
+  },
+  mounted() {
+    this.logtest()
   }
 }
 </script>
